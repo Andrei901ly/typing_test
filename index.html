@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Typing Speed Test</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <!-- Header -->
+        <header>
+            <div>
+                <h1>Typing Test</h1>
+                <p>Test your typing speed and accuracy</p>
+            </div>
+
+            <button id="themeBtn" class="theme-btn">
+                🌙
+            </button>
+        </header>
+
+
+        <!-- Test Duration -->
+        <div class="duration-container">
+
+            <button class="duration-btn active" data-time="30">
+                30s
+            </button>
+
+            <button class="duration-btn" data-time="60">
+                60s
+            </button>
+
+            <button class="duration-btn" data-time="120">
+                120s
+            </button>
+
+        </div>
+
+
+        <!-- Statistics -->
+        <div class="stats">
+
+            <div class="stat-box">
+                <span class="stat-label">Time</span>
+                <strong id="time">30</strong>
+                <small>seconds</small>
+            </div>
+
+            <div class="stat-box">
+                <span class="stat-label">WPM</span>
+                <strong id="wpm">0</strong>
+                <small>words/min</small>
+            </div>
+
+            <div class="stat-box">
+                <span class="stat-label">Accuracy</span>
+                <strong id="accuracy">100%</strong>
+                <small>accuracy</small>
+            </div>
+
+            <div class="stat-box">
+                <span class="stat-label">Best</span>
+                <strong id="best">0</strong>
+                <small>WPM</small>
+            </div>
+
+        </div>
+
+
+        <!-- Progress -->
+        <div class="progress-container">
+
+            <div class="progress-info">
+                <span>Progress</span>
+                <span id="progressText">0%</span>
+            </div>
+
+            <div class="progress-bar">
+                <div id="progress"></div>
+            </div>
+
+        </div>
+
+
+        <!-- Typing Area -->
+        <div class="typing-card">
+
+            <div id="textDisplay" class="text-display">
+                Click the text box below and start typing.
+            </div>
+
+            <textarea
+                id="typingInput"
+                placeholder="Start typing here..."
+                spellcheck="false"
+                autocomplete="off"
+                autocorrect="off"
+                autocapitalize="off">
+            </textarea>
+
+        </div>
+
+
+        <!-- Word Statistics -->
+        <div class="word-stats">
+
+            <div class="word-stat correct">
+                <span>✓</span>
+                <div>
+                    <small>Correct Words</small>
+                    <strong id="correctWords">0</strong>
+                </div>
+            </div>
+
+            <div class="word-stat incorrect">
+                <span>✕</span>
+                <div>
+                    <small>Incorrect Words</small>
+                    <strong id="incorrectWords">0</strong>
+                </div>
+            </div>
+
+        </div>
+
+
+        <!-- Controls -->
+        <div class="controls">
+
+            <button id="restartBtn" class="restart-btn">
+                ↻ Restart Test
+            </button>
+
+        </div>
+
+
+        <!-- Result -->
+        <div id="result" class="result hidden">
+
+            <div class="result-content">
+
+                <div class="result-icon">
+                    🏆
+                </div>
+
+                <h2>Test Complete!</h2>
+
+                <p>Your typing results</p>
+
+                <div class="result-stats">
+
+                    <div>
+                        <strong id="finalWpm">0</strong>
+                        <span>Words Per Minute</span>
+                    </div>
+
+                    <div>
+                        <strong id="finalAccuracy">0%</strong>
+                        <span>Accuracy</span>
+                    </div>
+
+                    <div>
+                        <strong id="finalCorrect">0</strong>
+                        <span>Correct</span>
+                    </div>
+
+                    <div>
+                        <strong id="finalIncorrect">0</strong>
+                        <span>Incorrect</span>
+                    </div>
+
+                </div>
+
+                <button id="tryAgainBtn">
+                    Try Again
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
